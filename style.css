@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+.header__wrapper {
+  background-image: url("scss/assets/header/bgpict.jpg"), url("scss/assets/header/bgpict2.jpg");
+  background-position: left, right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 562px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__div {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.header__nav {
+  display: flex;
+  width: 1274px;
+  margin-inline: auto;
+}
+
+.header__div-buttons {
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  gap: 53px;
+}/*# sourceMappingURL=style.css.map */
