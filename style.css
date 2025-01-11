@@ -7,9 +7,36 @@ body {
   background-color: #F2F2F2;
 }
 
+.header__span-name {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #EF7F04;
+}
+
+.header__button_font-roboto, .header__p-reason_font-roboto {
+  font-size: 14px;
+  font-family: "Roboto";
+  color: white;
+}
+
+.header__p-slogan_font-thin {
+  font-size: 36px;
+  font-family: "Roboto";
+  font-weight: 100;
+  color: white;
+}
+
+.header__span_font-oswald {
+  font-size: 20px;
+  font-family: "Oswald", serif;
+  font-weight: bold;
+  font-color: white;
+  text-transform: uppercase;
+}
+
 .header__wrapper {
-  background-image: url("scss/assets/header/bgpict.jpg"), url("scss/assets/header/bgpict2.jpg");
-  background-position: left, right;
+  background-image: url("scss/assets/header/bgready.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   height: 562px;
@@ -25,10 +52,24 @@ body {
   margin-top: 30px;
 }
 
+.header__p-reason_font-roboto {
+  margin-top: 20px;
+}
+
 .header__nav {
   display: flex;
   width: 1274px;
+  height: 50px;
   margin-inline: auto;
+}
+
+.header__icon-div {
+  display: flex;
+  align-items: center;
+}
+
+.header__span {
+  display: inline-block;
 }
 
 .header__div-buttons {
@@ -36,4 +77,12 @@ body {
   margin-left: auto;
   justify-content: center;
   gap: 53px;
+}
+
+.header__div-buttons {
+  align-items: center;
+}
+.header__div-buttons a {
+  text-decoration: none;
+  color: #000;
 }/*# sourceMappingURL=style.css.map */

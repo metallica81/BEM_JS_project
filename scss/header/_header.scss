@@ -7,9 +7,62 @@ body {
     background-color: #F2F2F2;
 }
 
+// VAR: fonts
+$font-h2-size: 24px;
+$font-p-size: 14px;
+$font-p-thin-size: 36px;
+$font-icon-size: 20px;
+$font-orange: #EF7F04;
+
+// extands
+%font-h2 {
+    font: {
+        size: $font-h2-size;
+        family: 'Roboto';
+        weight: bold;
+        color: white;
+    }
+}
+
+%font-h2-orange {
+    font: {
+        size: $font-h2-size;
+        family: 'Roboto';
+        weight: bold;
+    }
+    color: $font-orange;
+}
+
+%font-p {
+    font: {
+        size: $font-p-size;
+        family: 'Roboto';
+    }
+    color: white;
+}
+
+%font-p-thin {
+    font: {
+        size: $font-p-thin-size;
+        family: 'Roboto';
+        weight: 100;
+    }
+    color: white;
+}
+
+%font-icon {
+    font: {
+        size: $font-icon-size;
+        family: 'Oswald', serif;
+        weight: bold;
+        color: white;
+    }
+    text-transform: uppercase;
+}
+
 .header__wrapper {
-    background-image: url('scss/assets/header/bgpict.jpg'), url('scss/assets/header/bgpict2.jpg');
-    background-position: left, right;
+    background-image:
+    url('scss/assets/header/bgready.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     height: 562px;
@@ -17,6 +70,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 .header__div { 
     display: flex;
@@ -29,11 +83,37 @@ body {
     
 }
 
+.header__span-name {
+    @extend %font-h2-orange;
+}
+
+.header__p-slogan_font-thin {
+    @extend %font-p-thin
+}
+
+.header__p-reason_font-roboto {
+    @extend %font-p;
+    margin-top: 20px;
+}
+
 .header__nav {
     display: flex;
     width: 1274px;
+    height: 50px;
     margin-inline: auto;
-    
+}
+
+.header__icon-div {
+    display: flex;
+    align-items: center;
+}
+
+.header__span {
+    display: inline-block;
+}
+
+.header__span_font-oswald {
+    @extend %font-icon;
 }
 
 .header__div-buttons {
@@ -41,4 +121,16 @@ body {
     margin-left: auto;
     justify-content: center;
     gap: 53px;
+}
+
+.header__div-buttons {
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.header__button_font-roboto {
+    @extend %font-p;
 }
