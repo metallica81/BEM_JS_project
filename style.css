@@ -1,12 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  background-color: #F2F2F2;
-}
-
+@charset "UTF-8";
 .header__span-name {
   font-size: 24px;
   font-family: "Roboto";
@@ -14,7 +6,7 @@ body {
   color: #EF7F04;
 }
 
-.header__button_font-roboto, .header__p-reason_font-roboto {
+.header__p-reason_font-roboto, .header__button_font-roboto {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -35,9 +27,22 @@ body {
   text-transform: uppercase;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+.header {
+  max-width: 2000px;
+}
+
 .header__wrapper {
   background-image: url("scss/assets/header/bgready.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 562px;
   display: flex;
@@ -59,7 +64,7 @@ body {
 .header__nav {
   display: flex;
   width: 1274px;
-  height: 50px;
+  height: 72px;
   margin-inline: auto;
 }
 
@@ -79,10 +84,32 @@ body {
   gap: 53px;
 }
 
-.header__div-buttons {
-  align-items: center;
-}
 .header__div-buttons a {
   text-decoration: none;
   color: #000;
+}
+.header__div-buttons button {
+  border: none;
+  outline: none;
+  position: relative; /* Для создания псевдоэлемента */
+  padding-top: 4px; /* Чтобы изначально учесть высоту border */
+}
+.header__div-buttons button:hover {
+  color: #000; /* Сохраняем текстовый цвет, если он изменяется */
+}
+.header__div-buttons button::before {
+  content: ""; /* Создаем псевдоэлемент */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px; /* Толщина линии */
+  background-color: transparent; /* Изначально линия прозрачна */
+  transition: background-color 0.3s linear; /* Добавляем плавный эффект */
+}
+.header__div-buttons button:hover::before {
+  background-color: #EF7F04; /* При наведении меняем цвет */
+}
+.header__div-buttons button[placeholder]:holder {
+  padding-top: 2px;
 }/*# sourceMappingURL=style.css.map */
