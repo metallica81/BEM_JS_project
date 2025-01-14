@@ -1,0 +1,23 @@
+// variables
+$big-screen: 1300px;
+$medium-screen: 756px;
+$small-screen: 600px;
+
+// @mixin 
+@mixin screen-respond($media) {
+    @if $media == handhelds {
+        @media only screen and (max-width: $small-screen) {@content;}
+    }
+
+    @else if $media == medium-screens {
+        @media only screen and (min-width: $small-screen + 1) and (max-width: $medium-screen - 1) {@content;}
+    }
+
+    @else if $media == large-medium-screens {
+        @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen - 1) {@content;}
+    }
+
+    @else if $media == wide-screens {
+        @media only screen and (min-width: $big-screen) {@content;}
+    }
+}

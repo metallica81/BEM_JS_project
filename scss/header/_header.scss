@@ -1,4 +1,5 @@
 @use "../variables" as variables;
+@use "../mixins" as mixins;
 
 * {
     box-sizing: border-box;
@@ -26,9 +27,21 @@ body {
 
 .header__div { 
     display: flex;
-    flex-direction: row;
     gap: 30px;
     margin-top: 30px;
+    @include mixins.screen-respond(handhelds) {
+        flex-direction: column;
+    }
+    .header__point {
+        @include mixins.screen-respond(handhelds) {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            img {
+                width: 80px;
+            }
+        }
+    }
 }
 
 .header__span-name {
@@ -36,7 +49,20 @@ body {
 }
 
 .header__p-slogan_font-thin {
-    @extend %font-p-thin
+    @extend %font-p-thin;
+    @include mixins.screen-respond(handhelds) {
+        font-size: variables.$font-p-thin-size-media-small;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: variables.$font-p-thin-size-media-meduim;
+        text-wrap: balance;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: variables.$font-p-thin-size-media-large;
+    }
+    @include mixins.screen-respond(wide-screens) {
+        
+    }
 }
 
 .header__p-reason_font-roboto {
@@ -49,11 +75,18 @@ body {
     width: 1274px;
     height: 72px;
     margin-inline: auto;
+    @include mixins.screen-respond(handhelds) {
+        width: 400px;
+        margin: 0;
+    }
 }
 
 .header__icon-div {
     display: flex;
     align-items: center;
+    @include mixins.screen-respond(handhelds) {
+        //width: 100px;
+    }
 }
 
 .header__span {
