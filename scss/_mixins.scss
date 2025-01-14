@@ -1,20 +1,26 @@
 // variables
 $big-screen: 1300px;
 $medium-screen: 756px;
-$small-screen: 600px;
+$tablets-screen: 600px;
+$phones-screen: 400px;
+$ultra-narrow: 270px;
 
 // @mixin 
 @mixin screen-respond($media) {
-    @if $media == handhelds {
-        @media only screen and (max-width: $small-screen) {@content;}
+    @if $media == phones {
+        @media only screen and (max-width: $phones-screen) {@content;}
+    }
+
+    @else if $media == handhelds {
+        @media only screen and (min-width: #{$phones-screen + 1}) and (max-width: #{$tablets-screen}) {@content;}
     }
 
     @else if $media == medium-screens {
-        @media only screen and (min-width: $small-screen + 1) and (max-width: $medium-screen - 1) {@content;}
+        @media only screen and (min-width: #{$tablets-screen + 1}) and (max-width: #{$medium-screen}) {@content;}
     }
 
     @else if $media == large-medium-screens {
-        @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen - 1) {@content;}
+        @media only screen and (min-width: #{$medium-screen + 1}) and (max-width: #{$big-screen - 1}) {@content;}
     }
 
     @else if $media == wide-screens {

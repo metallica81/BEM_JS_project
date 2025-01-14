@@ -1,5 +1,6 @@
 @use "../variables" as variables;
 @use "../mixins" as mixins;
+@use "../header/header__menu";
 
 * {
     box-sizing: border-box;
@@ -32,8 +33,21 @@ body {
     @include mixins.screen-respond(handhelds) {
         flex-direction: column;
     }
+    @include mixins.screen-respond(phones) {
+        flex-direction: column;
+    }
     .header__point {
         @include mixins.screen-respond(handhelds) {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            img {
+                width: 80px;
+            }
+        }
+    }
+    .header__point {
+        @include mixins.screen-respond(phones) {
             display: flex;
             flex-direction: row;
             gap: 30px;
@@ -50,18 +64,24 @@ body {
 
 .header__p-slogan_font-thin {
     @extend %font-p-thin;
+    @include mixins.screen-respond(phones) {
+        font-size: variables.$font-p-thin-size-media-small;
+        text-wrap: wrap;
+    }
     @include mixins.screen-respond(handhelds) {
         font-size: variables.$font-p-thin-size-media-small;
+        text-wrap: wrap;
     }
     @include mixins.screen-respond(medium-screens) {
         font-size: variables.$font-p-thin-size-media-meduim;
-        text-wrap: balance;
+        text-wrap: wrap;
     }
     @include mixins.screen-respond(large-medium-screens) {
         font-size: variables.$font-p-thin-size-media-large;
+        text-wrap: wrap;
     }
     @include mixins.screen-respond(wide-screens) {
-        
+        text-wrap: wrap;
     }
 }
 
@@ -76,16 +96,33 @@ body {
     height: 72px;
     margin-inline: auto;
     @include mixins.screen-respond(handhelds) {
-        width: 400px;
-        margin: 0;
+        width: mixins.$phones-screen;
+        //margin: 0;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        width: mixins.$tablets-screen;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        width: mixins.$medium-screen;
+    }
+    @include mixins.screen-respond(phones) {
+        width: mixins.$ultra-narrow;
     }
 }
 
 .header__icon-div {
     display: flex;
     align-items: center;
-    @include mixins.screen-respond(handhelds) {
-        //width: 100px;
+    img {
+        @include mixins.screen-respond(medium-screens) {
+            width: 60px;
+        }
+        @include mixins.screen-respond(handhelds) {
+            width: 60px;
+        }
+        @include mixins.screen-respond(phones) {
+            width: 60px;
+        }
     }
 }
 
@@ -95,6 +132,15 @@ body {
 
 .header__span_font-oswald {
     @extend %font-icon;
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 16px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        font-size: 14px;
+    }
+    @include mixins.screen-respond(phones) {
+        font-size: 14px;
+    }
 }
 
 .header__div-buttons {
@@ -102,6 +148,15 @@ body {
     margin-left: auto;
     justify-content: center;
     gap: 53px;
+    @include mixins.screen-respond(medium-screens) {
+        gap: 20px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        display: none;
+    }
+    @include mixins.screen-respond(phones) {
+        display: none;
+    }
 }
 
 .header__div-buttons {
@@ -138,4 +193,14 @@ body {
 
 .header__button_font-roboto {
     @extend %font-p;
+}
+
+.menu {
+    display: none;
+    @include mixins.screen-respond(phones) {
+        display: flex;
+    }
+    @include mixins.screen-respond(handhelds) {
+        display: flex;
+    }
 }

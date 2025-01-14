@@ -61,7 +61,29 @@
                 <button><a href="" class="header__button header__button_font-roboto">Портфолио</a></button>
                 <button><a href="" class="header__button header__button_font-roboto">Контакты</a></button>
             </div>
+
+            <nav class="menu">
+                <button class="menu-toggle">Меню</button>
+                <ul class="menu-list">
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Портфолио</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
         </nav>
     </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuList = document.querySelector('.menu-list');
+
+        menuToggle.addEventListener('click', () => {
+            // Переключаем класс для показа/скрытия меню
+            menuList.classList.toggle('menu-visible');
+            });
+        });
+
+    </script>
 </body>
 </html>

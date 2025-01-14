@@ -1,0 +1,55 @@
+@use "../variables" as variables;
+
+/* Базовые стили */
+.menu {
+  position: relative;
+  margin-left: auto;
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Меню скрыто по умолчанию */
+  }
+  &-list a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background: variables.$background-button;
+    @extend %font-icon;
+    font-size: 15px;
+    color: white;
+    text-transform: capitalize;
+  }
+  .menu-list a:hover {
+    background: #ddd;
+    color: black;
+  }
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Скрываем подменю */
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.menu-list li:hover > .submenu {
+  display: block; /* Показываем подменю при наведении */
+}
+
+/* Кнопка для меню */
+.menu-toggle {
+  background: variables.$font-orange;
+  @extend %font-icon;
+  font-size: 18px;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.menu-visible {
+  display: block;
+}
+  
