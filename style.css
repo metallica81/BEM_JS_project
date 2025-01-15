@@ -13,7 +13,6 @@
 }
 
 .header__p-slogan_font-thin {
-  font-size: 36px;
   font-family: "Roboto";
   font-weight: 100;
   color: white;
@@ -23,10 +22,24 @@
   font-size: 20px;
   font-family: "Oswald", serif;
   font-weight: bold;
-  font-color: white;
   text-transform: uppercase;
 }
 
+.header__button_font-roboto {
+  font-size: 16px;
+  color: black;
+}
+
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .header__button_font-roboto {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 756px) {
+  .header__button_font-roboto {
+    font-size: 14px;
+  }
+}
 /* Базовые стили */
 .menu {
   position: relative;
@@ -92,10 +105,6 @@ body {
   background-color: #F2F2F2;
 }
 
-.header {
-  max-width: 2000px;
-}
-
 .header__wrapper {
   background-image: url("scss/assets/header/bgready.jpg");
   background-size: cover;
@@ -135,10 +144,10 @@ body {
   .header__div .header__point {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 10px;
   }
   .header__div .header__point img {
-    width: 80px;
+    width: 60px;
   }
 }
 
@@ -169,6 +178,7 @@ body {
 @media only screen and (min-width: 1300px) {
   .header__p-slogan_font-thin {
     text-wrap: wrap;
+    font-size: 36px;
   }
 }
 
@@ -272,11 +282,11 @@ body {
 .header__div-buttons button {
   border: none;
   outline: none;
-  position: relative; /* Для создания псевдоэлемента */
-  padding-top: 4px; /* Чтобы изначально учесть высоту border */
+  position: relative;
+  padding-top: 4px;
 }
 .header__div-buttons button:hover {
-  color: #000; /* Сохраняем текстовый цвет, если он изменяется */
+  color: #000;
 }
 .header__div-buttons button::before {
   content: ""; /* Создаем псевдоэлемент */
@@ -307,4 +317,60 @@ body {
   .menu {
     display: flex;
   }
+}
+
+.header__span-name {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #EF7F04;
+}
+
+.header__p-reason_font-roboto, .header__button_font-roboto, .button a {
+  font-size: 14px;
+  font-family: "Roboto";
+  color: white;
+}
+
+.header__p-slogan_font-thin {
+  font-family: "Roboto";
+  font-weight: 100;
+  color: white;
+}
+
+.header__span_font-oswald {
+  font-size: 20px;
+  font-family: "Oswald", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header__button_font-roboto, .button a {
+  font-size: 16px;
+  color: black;
+}
+
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .header__button_font-roboto, .button a {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 756px) {
+  .header__button_font-roboto, .button a {
+    font-size: 14px;
+  }
+}
+.button {
+  border: none;
+}
+
+.button a {
+  text-decoration: none;
+  color: black;
+}
+
+.main {
+  width: 1274px;
+  margin-top: 122px;
+  margin-inline: auto;
 }/*# sourceMappingURL=style.css.map */

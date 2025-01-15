@@ -1,0 +1,10 @@
+@use "../variables" as variables;
+// button
+.button {
+    a {
+        text-decoration: none;
+        color: black;
+        @extend %font-button;
+    }
+    border: none;
+}

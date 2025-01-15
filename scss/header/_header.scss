@@ -11,9 +11,9 @@ body {
     background-color: variables.$background-color;
 }
 
-.header {
-    max-width: 2000px;
-}
+// .header {
+    //max-width: 2000px;
+// }
 
 .header__wrapper {
     background-image: url('scss/assets/header/bgready.jpg');
@@ -45,14 +45,12 @@ body {
                 width: 80px;
             }
         }
-    }
-    .header__point {
         @include mixins.screen-respond(phones) {
             display: flex;
             flex-direction: row;
-            gap: 30px;
+            gap: 10px;
             img {
-                width: 80px;
+                width: 60px;
             }
         }
     }
@@ -63,7 +61,7 @@ body {
 }
 
 .header__p-slogan_font-thin {
-    @extend %font-p-thin;
+    
     @include mixins.screen-respond(phones) {
         font-size: variables.$font-p-thin-size-media-small;
         text-wrap: wrap;
@@ -82,7 +80,9 @@ body {
     }
     @include mixins.screen-respond(wide-screens) {
         text-wrap: wrap;
+        font-size: variables.$font-p-thin-size;
     }
+    @extend %font-p-thin;
 }
 
 .header__p-reason_font-roboto {
@@ -167,11 +167,11 @@ body {
     button {
         border: none;
         outline: none;
-        position: relative; /* Для создания псевдоэлемента */
-        padding-top: 4px; /* Чтобы изначально учесть высоту border */
+        position: relative; 
+        padding-top: 4px; 
     }
     button:hover {
-        color: #000; /* Сохраняем текстовый цвет, если он изменяется */
+        color: #000; 
     }
     button::before {
         content: ''; /* Создаем псевдоэлемент */
@@ -192,7 +192,7 @@ body {
 }
 
 .header__button_font-roboto {
-    @extend %font-p;
+    @extend %font-button;
 }
 
 .menu {
