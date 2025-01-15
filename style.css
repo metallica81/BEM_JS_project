@@ -1,4 +1,10 @@
 @charset "UTF-8";
+.h2 {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
 .header__span-name {
   font-size: 24px;
   font-family: "Roboto";
@@ -6,7 +12,7 @@
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .header__button_font-roboto {
+.section-company__p, .header__p-reason_font-roboto, .header__button_font-roboto {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -319,6 +325,12 @@ body {
   }
 }
 
+.h2 {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
 .header__span-name {
   font-size: 24px;
   font-family: "Roboto";
@@ -326,7 +338,7 @@ body {
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .header__button_font-roboto, .button a {
+.header__p-reason_font-roboto, .section-company__p, .header__button_font-roboto, .button a {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -362,6 +374,10 @@ body {
 }
 .button {
   border: none;
+  width: 144px;
+  height: 38px;
+  outline: none;
+  background-color: #fff;
 }
 
 .button a {
@@ -369,8 +385,86 @@ body {
   color: black;
 }
 
+.button:hover {
+  background-color: #EF7F04;
+  border-radius: 3px;
+}
+
+.button:hover a {
+  color: white;
+}
+
 .main {
-  width: 1274px;
+  width: 1247px;
   margin-top: 122px;
   margin-inline: auto;
+}
+
+.section-company {
+  width: 1247px;
+  height: 621px;
+  background-color: white;
+}
+.section-company__h2 {
+  padding-top: 50px;
+  margin: auto;
+}
+.section-company__pane {
+  margin: auto;
+  padding-block: 30px;
+}
+.section-company__wrapper {
+  display: flex;
+  gap: 30px;
+}
+.section-company__wrapper-text {
+  width: 352px;
+  height: 365px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 164px;
+}
+.section-company__p {
+  display: list-item;
+}
+.section-company__p::marker {
+  color: #2e9aff;
+}
+
+.h2 {
+  width: 143px;
+}
+
+.pane {
+  width: 640px;
+}
+
+.section-cases {
+  width: 1247px;
+  margin-top: 122px;
+  height: 389px;
+  background-color: white;
+}
+.section-cases__h2 {
+  margin-inline: auto;
+  padding-top: 50px;
+}
+.section-cases__wrapper {
+  display: flex;
+  width: 1150px;
+  margin-inline: auto;
+  flex-direction: row;
+  padding-top: 40px;
+  gap: 42px;
+}
+.section-cases__wrapper-photo {
+  display: flex;
+  gap: 42px;
+}
+
+.footer {
+  width: 100%;
+  height: 548px;
+  background-color: #2F2F51;
 }/*# sourceMappingURL=style.css.map */

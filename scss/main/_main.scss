@@ -1,7 +1,84 @@
 @use "components" as components;
+@use "../variables" as variables;
 
 .main {
-    width: 1274px;
-    margin-top: 122px;
+    width: variables.$global-width;
+    margin-top: variables.$global-margin;
     margin-inline: auto;
 }
+
+.section-company {
+    width: variables.$global-width;
+    height: 621px;
+    background-color: white;
+
+    &__h2 {
+        padding-top: 50px;
+        
+        margin: auto;
+    }
+    &__pane {
+        margin: auto;
+        padding-block: 30px;
+    }
+    &__wrapper {
+        display: flex;
+        gap: 30px;
+        &-text {
+            width: 352px;
+            height: 365px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 164px;
+
+        }
+    }
+    &__p {
+        display: list-item;
+        &::marker {
+            color: #2e9aff;
+        }
+        @extend %font-p;
+    }
+}
+
+
+.h2 {
+    width: 143px;
+    @extend %font-h2;
+}
+
+.pane {
+    width: 640px;
+}
+
+.section-cases {
+    width: variables.$global-width;
+    margin-top: 122px;
+    height: 389px;
+    background-color: white;
+    &__h2 {
+        margin-inline: auto;
+        padding-top: 50px;
+    }
+    &__wrapper {
+        display: flex;
+        width: 1150px;
+        margin-inline: auto;
+        flex-direction: row;
+        padding-top: 40px;
+        gap: 42px;
+        &-photo {
+            display: flex;
+            gap: 42px;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 548px;
+    background-color: variables.$background-color-footer;
+}
+

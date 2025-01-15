@@ -75,8 +75,8 @@
 
     <main class="main">
         <section class="section-company">
-            <h2 class="section-company__h2">О компании</h2>
-            <div class="section-company__pane">
+            <h2 class="h2 section-company__h2">О компании</h2>
+            <div class="pane section-company__pane">
                 <button class="button"><a href="" class="section-company_a">Описание</a></button>
                 <button class="button"><a href="" class="section-company_a">Как мы работаем</a></button>
                 <button class="button"><a href="" class="section-company_a">Отзывы</a></button>
@@ -106,10 +106,10 @@
             </div>
         </section>
         <section class="section-cases">
-            <h2 class="section-cases__h2">Портфолио</h2>
+            <h2 class="h2 section-cases__h2">Портфолио</h2>
             <div class="section-cases__wrapper">
                 <img src="scss/assets/main/left-arrow.svg" alt="left-arrow" class="section-cases__arrow">
-                <div class="section-cases__wrapper">
+                <div class="section-cases__wrapper-photo">
                     <img src="scss/assets/main/photo1.jpg" alt="photo1" class="section-cases__photo">
                     <img src="scss/assets/main/photo2.jpg" alt="photo2" class="section-cases__photo">
                     <img src="scss/assets/main/photo3.jpg" alt="photo3" class="section-cases__photo">
@@ -120,6 +120,26 @@
         </section>
     </main>
 
+    <footer class="footer">
+        <section class="credit">
+            <img src="scss/assets/footer/man.jpg" alt="man" class="man">
+            <section class="contact">
+                <div class="icon">
+                    <div class="header__icon-div">
+                        <img src="scss/assets/header/icon.svg" alt="icon">
+                        <span class="header__span header__span_font-oswald">Ателье<br>балконов</span>
+                    </div>
+                    <div class="phone">
+                        <img src="scss/assets/footer/phone.svg" alt="phone" class="phone">
+                        <span class="phone">+73953266098</span>
+                        <img src="scss/assets/footer/mail.svg" alt="mail" class="mail">
+                        <span class="mail">metallica923@gmail.com</span>
+                    </div>
+                    <span class="copyright">Пользовательское соглашение</span>
+                </div>
+            </section>
+        </section>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
         const menuToggle = document.querySelector('.menu-toggle');

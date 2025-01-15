@@ -7,4 +7,16 @@
         @extend %font-button;
     }
     border: none;
+    width: 144px;
+    height: 38px;
+    outline: none;
+    background-color: #fff;
+}
+
+.button:hover {
+    background-color: variables.$font-orange;
+    a {
+        color: white;
+    }
+    border-radius: 3px;
 }
