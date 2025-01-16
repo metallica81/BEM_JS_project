@@ -1,0 +1,9 @@
+@use "../variables" as variables;
+@use "../mixins" as mixins;
+
+.footer {
+    width: 100%;
+    height: 548px;
+    background-color: variables.$background-color-footer;
+    margin-top: 122px;
+}

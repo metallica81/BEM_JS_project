@@ -427,9 +427,13 @@ body {
 }
 .section-company__p {
   display: list-item;
+  color: black !important;
 }
 .section-company__p::marker {
   color: #2e9aff;
+}
+.section-company__p .section-company__p-block {
+  color: black;
 }
 
 .h2 {
@@ -463,8 +467,56 @@ body {
   gap: 42px;
 }
 
+.h2 {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+
+.header__span-name {
+  font-size: 24px;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #EF7F04;
+}
+
+.header__p-reason_font-roboto, .section-company__p, .header__button_font-roboto {
+  font-size: 14px;
+  font-family: "Roboto";
+  color: white;
+}
+
+.header__p-slogan_font-thin {
+  font-family: "Roboto";
+  font-weight: 100;
+  color: white;
+}
+
+.header__span_font-oswald {
+  font-size: 20px;
+  font-family: "Oswald", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header__button_font-roboto {
+  font-size: 16px;
+  color: black;
+}
+
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .header__button_font-roboto {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 756px) {
+  .header__button_font-roboto {
+    font-size: 14px;
+  }
+}
 .footer {
   width: 100%;
   height: 548px;
   background-color: #2F2F51;
+  margin-top: 122px;
 }/*# sourceMappingURL=style.css.map */
