@@ -17,7 +17,7 @@
         
         margin: auto;
     }
-    &__pane {
+    &__panel {
         margin: auto;
         padding-block: 30px;
     }
@@ -34,17 +34,17 @@
 
         }
     }
-    
+
     &__p {
         display: list-item;
         &::marker {
             color: #2e9aff;
         }
         @extend %font-p;
-        color: black !important;
+        color: black;
     }
 
-    &__p &__p-block {
+    &__p-container > &__p {
         color: black;
     }
 }
@@ -55,8 +55,10 @@
     @extend %font-h2;
 }
 
-.pane {
-    width: 640px;
+.panel {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
 }
 
 .section-cases {
