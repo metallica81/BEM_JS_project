@@ -1,0 +1,79 @@
+@use "mixins" as mixins;
+
+// VAR: sizes
+$global-width: 1247px;
+$global-margin: 122px;
+
+// VAR: font-sizes
+$font-h2-size: 24px;
+$font-p-size: 14px;
+$font-p-thin-size: 36px;
+$font-p-thin-size-media-large: 28px;
+$font-p-thin-size-media-meduim: 24px;
+$font-p-thin-size-media-small: 20px;
+$font-icon-size: 20px;
+
+// VAR: colors
+$font-orange: #EF7F04;
+$background-color: #F2F2F2;
+$background-button: #3B3A63;
+$background-color-footer: #2F2F51;
+
+// extands
+%font-h2 {
+    font: {
+        size: $font-h2-size;
+        family: 'Roboto';
+        weight: bold;
+    }
+}
+
+%font-h2-orange {
+    font: {
+        size: $font-h2-size;
+        family: 'Roboto';
+        weight: bold;
+    }
+    color: $font-orange;
+}
+
+%font-p {
+    font: {
+        size: $font-p-size;
+        family: 'Roboto';
+    }
+    color: white;
+}
+
+%font-p-thin {
+    font: {
+        
+        family: 'Roboto';
+        weight: 100;
+    }
+    color: white;
+}
+
+%font-icon {
+    font: {
+        size: $font-icon-size;
+        family: 'Oswald', serif;
+        weight: bold;
+    }
+    //color: white;
+    text-transform: uppercase;
+}
+
+%font-button {
+    @extend %font-p;
+    font: {
+        size: 16px;
+    }
+    color: black;
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 14px;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,174 @@
+@use "../variables" as variables;
+@use "../mixins" as mixins;
+@use "../header/header__menu";
+@use "../logo";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: variables.$background-color;
+}
+
+// .header {
+    //max-width: 2000px;
+// }
+
+.header__wrapper {
+    background-image: url('/assets/scss/header/header__assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 562px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header__div { 
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    @include mixins.screen-respond(handhelds) {
+        flex-direction: column;
+    }
+    @include mixins.screen-respond(phones) {
+        flex-direction: column;
+    }
+    .header__point {
+        @include mixins.screen-respond(handhelds) {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            img {
+                width: 80px;
+            }
+        }
+        @include mixins.screen-respond(phones) {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            img {
+                width: 60px;
+            }
+        }
+    }
+}
+
+.header__span-name {
+    @extend %font-h2-orange;
+}
+
+.header__p-slogan_font-thin {
+    
+    @include mixins.screen-respond(phones) {
+        font-size: variables.$font-p-thin-size-media-small;
+        text-wrap: wrap;
+    }
+    @include mixins.screen-respond(handhelds) {
+        font-size: variables.$font-p-thin-size-media-small;
+        text-wrap: wrap;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: variables.$font-p-thin-size-media-meduim;
+        text-wrap: wrap;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: variables.$font-p-thin-size-media-large;
+        text-wrap: wrap;
+    }
+    @include mixins.screen-respond(wide-screens) {
+        text-wrap: wrap;
+        font-size: variables.$font-p-thin-size;
+    }
+    @extend %font-p-thin;
+}
+
+.header__p-reason_font-roboto {
+    @extend %font-p;
+    margin-top: 20px;
+}
+
+.header__nav {
+    display: flex;
+    width: 1274px;
+    height: 72px;
+    margin-inline: auto;
+    @include mixins.screen-respond(handhelds) {
+        width: mixins.$phones-screen;
+        //margin: 0;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        width: mixins.$tablets-screen;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        width: mixins.$medium-screen;
+    }
+    @include mixins.screen-respond(phones) {
+        width: mixins.$ultra-narrow;
+    }
+}
+
+.header__div-buttons {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+    gap: 53px;
+    @include mixins.screen-respond(medium-screens) {
+        gap: 20px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        display: none;
+    }
+    @include mixins.screen-respond(phones) {
+        display: none;
+    }
+}
+
+.header__div-buttons {
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    button {
+        border: none;
+        outline: none;
+        position: relative; 
+        padding-top: 4px; 
+    }
+    button:hover {
+        color: #000; 
+    }
+    button::before {
+        content: ''; /* Создаем псевдоэлемент */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px; /* Толщина линии */
+        background-color: transparent; /* Изначально линия прозрачна */
+        transition: background-color 0.3s linear; /* Добавляем плавный эффект */
+    }
+    button:hover::before {
+        background-color: variables.$font-orange; /* При наведении меняем цвет */
+    }
+    button[placeholder]:holder {
+        padding-top: 2px;
+    }
+}
+
+.header__button_font-roboto {
+    @extend %font-button;
+}
+
+.menu {
+    display: none;
+    @include mixins.screen-respond(phones) {
+        display: flex;
+    }
+    @include mixins.screen-respond(handhelds) {
+        display: flex;
+    }
+}

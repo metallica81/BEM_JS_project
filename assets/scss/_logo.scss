@@ -1,0 +1,31 @@
+@use "../scss/mixins";
+@use "../scss/variables";
+.logo {
+    display: flex;
+    align-items: center;
+    img {
+        @include mixins.screen-respond(medium-screens) {
+            width: 60px;
+        }
+        @include mixins.screen-respond(handhelds) {
+            width: 60px;
+        }
+        @include mixins.screen-respond(phones) {
+            width: 60px;
+        }
+    }
+}
+
+.logo__span {
+    display: inline-block;
+    @extend %font-icon;
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 16px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        font-size: 14px;
+    }
+    @include mixins.screen-respond(phones) {
+        font-size: 14px;
+    }
+}
