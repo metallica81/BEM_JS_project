@@ -1,11 +1,11 @@
 @use "../variables" as variables;
 // button
 .button {
-    a {
-        text-decoration: none;
-        color: black;
-        @extend %font-button;
-    }
+
+    text-decoration: none;
+    color: black;
+    @extend %font-button;
+
     border: none;
     width: 144px;
     height: 38px;
@@ -13,10 +13,14 @@
     background-color: #fff;
 }
 
+.button_selected {
+    background-color: variables.$font-orange;
+    color: white;
+    border-radius: 3px;
+}
+
 .button:hover {
     background-color: variables.$font-orange;
-    a {
-        color: white;
-    }
+    color: white;
     border-radius: 3px;
 }

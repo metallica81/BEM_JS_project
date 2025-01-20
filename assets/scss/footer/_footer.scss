@@ -51,7 +51,7 @@
     }
     li::before {
         content: ''; /* Псевдоэлемент для маркера */
-    background-image: url('scss/assets/footer/marker.svg'); /* Подключаем SVG */
+    background-image: url('assets/scss/footer/footer__assets/marker.svg'); /* Подключаем SVG */
     background-size: contain; /* Обеспечиваем правильное отображение */
     background-repeat: no-repeat;
     position: absolute;

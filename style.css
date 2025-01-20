@@ -12,7 +12,7 @@
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .section-company__p, .contact, .header__button_font-roboto, .button a {
+.header__p-reason_font-roboto, .section-company__p, .contact, .header__button_font-roboto, .button {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -31,22 +31,24 @@
   text-transform: uppercase;
 }
 
-.header__button_font-roboto, .button a {
+.header__button_font-roboto, .button {
   font-size: 16px;
   color: black;
 }
 
 @media only screen and (min-width: 757px) and (max-width: 1299px) {
-  .header__button_font-roboto, .button a {
+  .header__button_font-roboto, .button {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 756px) {
-  .header__button_font-roboto, .button a {
+  .header__button_font-roboto, .button {
     font-size: 14px;
   }
 }
 .button {
+  text-decoration: none;
+  color: black;
   border: none;
   width: 144px;
   height: 38px;
@@ -54,18 +56,16 @@
   background-color: #fff;
 }
 
-.button a {
-  text-decoration: none;
-  color: black;
+.button_selected {
+  background-color: #EF7F04;
+  color: white;
+  border-radius: 3px;
 }
 
 .button:hover {
   background-color: #EF7F04;
-  border-radius: 3px;
-}
-
-.button:hover a {
   color: white;
+  border-radius: 3px;
 }
 
 .main {
@@ -119,6 +119,11 @@
 
 .section-company__p-container > .section-company__p {
   color: black;
+}
+
+.section-way, .section-feedback {
+  height: 500px;
+  display: none;
 }
 
 .section-company__wrapper-video video {
@@ -204,7 +209,7 @@
 }
 .condition-list li::before {
   content: ""; /* Псевдоэлемент для маркера */
-  background-image: url("scss/assets/footer/marker.svg"); /* Подключаем SVG */
+  background-image: url("assets/scss/footer/footer__assets/marker.svg"); /* Подключаем SVG */
   background-size: contain; /* Обеспечиваем правильное отображение */
   background-repeat: no-repeat;
   position: absolute;
@@ -273,7 +278,7 @@
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .contact, .section-company__p, .header__button_font-roboto, .button a {
+.header__p-reason_font-roboto, .contact, .section-company__p, .header__button_font-roboto, .button {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -292,22 +297,24 @@
   text-transform: uppercase;
 }
 
-.header__button_font-roboto, .button a {
+.header__button_font-roboto, .button {
   font-size: 16px;
   color: black;
 }
 
 @media only screen and (min-width: 757px) and (max-width: 1299px) {
-  .header__button_font-roboto, .button a {
+  .header__button_font-roboto, .button {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 756px) {
-  .header__button_font-roboto, .button a {
+  .header__button_font-roboto, .button {
     font-size: 14px;
   }
 }
 .button {
+  text-decoration: none;
+  color: black;
   border: none;
   width: 144px;
   height: 38px;
@@ -315,18 +322,16 @@
   background-color: #fff;
 }
 
-.button a {
-  text-decoration: none;
-  color: black;
+.button_selected {
+  background-color: #EF7F04;
+  color: white;
+  border-radius: 3px;
 }
 
 .button:hover {
   background-color: #EF7F04;
-  border-radius: 3px;
-}
-
-.button:hover a {
   color: white;
+  border-radius: 3px;
 }
 
 .main {
@@ -373,6 +378,11 @@
 }
 .section-company__p-container > .section-company__p {
   color: black;
+}
+
+.section-way, .section-feedback {
+  height: 500px;
+  display: none;
 }
 
 .section-company__wrapper-video video {

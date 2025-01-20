@@ -77,12 +77,12 @@
         <section class="section section-company">
             <h2 class="h2 section-company__h2" id="company">О компании</h2>
             <div class="panel section-company__panel">
-                <button class="button"><a href="" class="section-company_a">Описание</a></button>
-                <button class="button"><a href="" class="section-company_a">Как мы работаем</a></button>
-                <button class="button"><a href="" class="section-company_a">Отзывы</a></button>
+                <button class="button button_selected" onclick="descriptionCompany(); return false;">Описание</button>
+                <button class="button" onclick="workWayCompany(event); return false;">Как мы работаем</button>
+                <button class="button" onclick="feedbackCompany(); return false;">Отзывы</button>
                 <!-- <button class="button"><a href="" class="section-company_a">Сертификаты</a></button> -->
             </div>
-            <div class="section-company__wrapper">
+            <!-- <div class="section-company__wrapper descriptionCompany">
                 <div class="section-company__wrapper-text">
                     <div class="logo">
                         <img src="assets/global_img/logo.svg" alt="icon">
@@ -99,14 +99,21 @@
                             Девиз нашей компании — качество и надёжность.
                         </p>
                     </div>
+                    
                 </div>
                 <div class="section-company__wrapper-video">
-                    <!-- <img src="assets/scss/main/main__assets/video.jpg" alt="video" class="section-company__video"> -->
+                    
                     <video src="assets/scss/main/main__assets/video.mp4" type="video/mp4" controls></video>
                 </div>
+            </div> -->
+            <div class="section-company__wrapper workWayCompany">
+
+            </div>
+            
+            <div class="section-company__wrapper feedbackCompany">
+
             </div>
         </section>
-        <!-- <section class="section section-company"></section> -->
         <section class="section section-cases">
             <h2 class="h2 section-cases__h2" id="cases">Портфолио</h2>
             <div class="section-cases__wrapper">
@@ -160,36 +167,14 @@
         </section>
         
     </footer>
-    <script>
 
-        // Меню nav
-        document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuList = document.querySelector('.menu-list');
+    <!-- Меню -->
+    <script src="assets/scss/header/header.js"></script> 
 
-        menuToggle.addEventListener('click', () => {
-            // Переключаем класс для показа/скрытия меню
-            menuList.classList.toggle('menu-visible');
-            });
-        });
+    <!-- Кнопки в разделе компания -->
+    <script src="assets/scss/main/main.js"></script>
 
-        // Скачивание файлов
-        function downloadFiles() {
-            const files = [
-                'assets/docs/act.xls',
-                'assets/docs/alum.docx',
-                'assets/docs/prihod.docx'
-            ];
-
-            files.forEach(file => {
-                const link = document.createElement('a');
-                link.href = file;
-                link.download = file.split('/').pop(); // Установить имя файла
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
-}
-    </script>
+    <!-- скачивание документов -->
+    <script src="assets/scss/footer/footer.js"></script>
 </body>
 </html>

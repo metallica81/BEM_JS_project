@@ -51,6 +51,11 @@
     }
 }
 
+.section-way, .section-feedback {
+    height: 500px;
+    display: none;
+}
+
 .section-company__wrapper-video {
     video {
         width: 562px;
