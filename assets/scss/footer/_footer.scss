@@ -34,8 +34,6 @@
 }
 
 .condition-list {
-
-
     li {
         @extend %font-icon;
         font-size: 18px;
@@ -105,4 +103,8 @@
 .mail-wrapper {
     display: flex;
     gap: 10px;
+}
+
+.copyright {
+    cursor: pointer;
 }

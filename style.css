@@ -121,6 +121,10 @@
   color: black;
 }
 
+.section-company__wrapper-video video {
+  width: 562px;
+}
+
 .h2 {
   width: 143px;
 }
@@ -252,6 +256,10 @@
   gap: 10px;
 }
 
+.copyright {
+  cursor: pointer;
+}
+
 .h2 {
   font-size: 24px;
   font-family: "Roboto";
@@ -365,6 +373,10 @@
 }
 .section-company__p-container > .section-company__p {
   color: black;
+}
+
+.section-company__wrapper-video video {
+  width: 562px;
 }
 
 .h2 {

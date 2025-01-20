@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="scss/assets/global_img/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/global_img/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -101,10 +101,12 @@
                     </div>
                 </div>
                 <div class="section-company__wrapper-video">
-                    <img src="assets/scss/main/main__assets/video.jpg" alt="video" class="section-company__video">
+                    <!-- <img src="assets/scss/main/main__assets/video.jpg" alt="video" class="section-company__video"> -->
+                    <video src="assets/scss/main/main__assets/video.mp4" type="video/mp4" controls></video>
                 </div>
             </div>
         </section>
+        <!-- <section class="section section-company"></section> -->
         <section class="section section-cases">
             <h2 class="h2 section-cases__h2" id="cases">Портфолио</h2>
             <div class="section-cases__wrapper">
@@ -149,12 +151,18 @@
                         <img src="assets/scss/footer/footer__assets/mail.svg" alt="mail" class="mail">
                         <span class="mail">metallica923@gmail.com</span>
                     </div>
+                    <div class="mail-wrapper">
+                        <img src="assets/scss/footer/footer__assets/clock.svg" alt="clock">
+                        <span>Коллцентр: 09:00 - 18:00 ежедневно</span>
+                    </div>
                 </div>
-                <span class="copyright">Пользовательское соглашение</span>
+                <span class="copyright" onclick="downloadFiles()">Пользовательское соглашение</span>              
         </section>
         
     </footer>
     <script>
+
+        // Меню nav
         document.addEventListener('DOMContentLoaded', () => {
         const menuToggle = document.querySelector('.menu-toggle');
         const menuList = document.querySelector('.menu-list');
@@ -165,6 +173,23 @@
             });
         });
 
+        // Скачивание файлов
+        function downloadFiles() {
+            const files = [
+                'assets/docs/act.xls',
+                'assets/docs/alum.docx',
+                'assets/docs/prihod.docx'
+            ];
+
+            files.forEach(file => {
+                const link = document.createElement('a');
+                link.href = file;
+                link.download = file.split('/').pop(); // Установить имя файла
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+}
     </script>
 </body>
 </html>
