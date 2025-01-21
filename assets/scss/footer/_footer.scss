@@ -34,10 +34,9 @@
 }
 
 .condition-list {
-    li {
+    .li {
         @extend %font-icon;
         font-size: 18px;
-        text-transform: initial;
         font-weight: 500;
         margin-left: 30px;
         padding-left: 15px;
@@ -46,8 +45,9 @@
         list-style-type: none;
         position: relative;
     }
-    .li {
+    li.li {
         color: black;
+        text-transform: initial;
     }
     li::before {
         content: ''; /* Псевдоэлемент для маркера */

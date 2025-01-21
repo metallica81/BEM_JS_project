@@ -12,7 +12,7 @@
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .section-company__p, .contact, .header__button_font-roboto, .button {
+.header__p-reason_font-roboto, .workWayCompany, .section-company__p, .contact, .header__button_font-roboto, .button {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -24,7 +24,7 @@
   color: white;
 }
 
-.condition-list li {
+.condition-list .li {
   font-size: 20px;
   font-family: "Oswald", serif;
   font-weight: bold;
@@ -163,6 +163,69 @@
   gap: 42px;
 }
 
+.workWayCompany {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 60px 30px 60px;
+}
+
+.workWayCompany p {
+  color: #000;
+}
+
+.workWayCompany img {
+  height: 200px;
+  margin-right: auto;
+}
+
+.label {
+  width: 80px;
+  height: 38px;
+  border-radius: 30px;
+  background-color: #59B293;
+  box-shadow: 3px 4px 5px rgba(1, 1, 1, 0.5);
+  padding-top: 6px;
+  padding-left: 16px;
+  font-size: 18px;
+}
+
+.step:nth-child(2) .label {
+  background-color: #ebce4a;
+}
+
+.step:nth-child(3) .label {
+  background-color: #458FDE;
+}
+
+.step:nth-child(4) .label {
+  background-color: #EF7F04;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 240px;
+}
+
+.section-cases__photo {
+  transition: opacity 0.5s ease; /* Анимация прозрачности */
+  opacity: 1; /* По умолчанию слайды видны */
+}
+
+.section-cases__photo.hidden {
+  opacity: 0; /* Слайд скрывается плавно */
+}
+
+.section-cases__wrapper-photo {
+  position: relative; /* Для правильного позиционирования слайдов */
+}
+
+.section-cases__arrow {
+  cursor: pointer; /* Указатель мыши для стрелок */
+}
+
 .footer {
   width: 100%;
   height: 548px;
@@ -194,9 +257,8 @@
   width: 260px;
 }
 
-.condition-list li {
+.condition-list .li {
   font-size: 18px;
-  text-transform: initial;
   font-weight: 500;
   margin-left: 30px;
   padding-left: 15px;
@@ -204,8 +266,9 @@
   list-style-type: none;
   position: relative;
 }
-.condition-list .li {
+.condition-list li.li {
   color: black;
+  text-transform: initial;
 }
 .condition-list li::before {
   content: ""; /* Псевдоэлемент для маркера */
@@ -278,7 +341,7 @@
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .contact, .section-company__p, .header__button_font-roboto, .button {
+.header__p-reason_font-roboto, .contact, .section-company__p, .workWayCompany, .header__button_font-roboto, .button {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -290,7 +353,7 @@
   color: white;
 }
 
-.condition-list li {
+.condition-list .li {
   font-size: 20px;
   font-family: "Oswald", serif;
   font-weight: bold;
@@ -419,6 +482,67 @@
   gap: 42px;
 }
 
+.workWayCompany {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 60px 30px 60px;
+}
+.workWayCompany p {
+  color: #000;
+}
+.workWayCompany img {
+  height: 200px;
+  margin-right: auto;
+}
+
+.label {
+  width: 80px;
+  height: 38px;
+  border-radius: 30px;
+  background-color: #59B293;
+  box-shadow: 3px 4px 5px rgba(1, 1, 1, 0.5);
+  padding-top: 6px;
+  padding-left: 16px;
+  font-size: 18px;
+}
+
+.step:nth-child(2) .label {
+  background-color: #ebce4a;
+}
+
+.step:nth-child(3) .label {
+  background-color: #458FDE;
+}
+
+.step:nth-child(4) .label {
+  background-color: #EF7F04;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 240px;
+}
+
+.section-cases__photo {
+  transition: opacity 0.5s ease; /* Анимация прозрачности */
+  opacity: 1; /* По умолчанию слайды видны */
+}
+
+.section-cases__photo.hidden {
+  opacity: 0; /* Слайд скрывается плавно */
+}
+
+.section-cases__wrapper-photo {
+  position: relative; /* Для правильного позиционирования слайдов */
+}
+
+.section-cases__arrow {
+  cursor: pointer; /* Указатель мыши для стрелок */
+}
+
 .h2 {
   font-size: 24px;
   font-family: "Roboto";
@@ -432,7 +556,7 @@
   color: #EF7F04;
 }
 
-.contact, .section-company__p, .header__p-reason_font-roboto, .header__button_font-roboto {
+.contact, .section-company__p, .workWayCompany, .header__p-reason_font-roboto, .header__button_font-roboto {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -444,7 +568,7 @@
   color: white;
 }
 
-.condition-list li, .logo__span, .menu-list a, .menu-toggle {
+.condition-list .li, .logo__span, .menu-list a, .menu-toggle {
   font-size: 20px;
   font-family: "Oswald", serif;
   font-weight: bold;

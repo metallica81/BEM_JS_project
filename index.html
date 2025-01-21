@@ -77,12 +77,12 @@
         <section class="section section-company">
             <h2 class="h2 section-company__h2" id="company">О компании</h2>
             <div class="panel section-company__panel">
-                <button class="button button_selected" onclick="descriptionCompany(); return false;">Описание</button>
+                <button class="button button_selected" onclick="descriptionCompany(event); return false;">Описание</button>
                 <button class="button" onclick="workWayCompany(event); return false;">Как мы работаем</button>
-                <button class="button" onclick="feedbackCompany(); return false;">Отзывы</button>
+                <button class="button" onclick="feedbackCompany(event); return false;">Отзывы</button>
                 <!-- <button class="button"><a href="" class="section-company_a">Сертификаты</a></button> -->
             </div>
-            <!-- <div class="section-company__wrapper descriptionCompany">
+            <div class="section-company__wrapper descriptionCompany opened">
                 <div class="section-company__wrapper-text">
                     <div class="logo">
                         <img src="assets/global_img/logo.svg" alt="icon">
@@ -105,26 +105,59 @@
                     
                     <video src="assets/scss/main/main__assets/video.mp4" type="video/mp4" controls></video>
                 </div>
-            </div> -->
-            <div class="section-company__wrapper workWayCompany">
-
+            </div>
+            <div class="section-company__wrapper workWayCompany" hidden>
+                <div class="step">
+                    <div class="label">1 шаг</div>
+                    <img src="assets/scss/main/main__assets/dispatcher.svg" alt="dispatcher">
+                    <p>
+                        Свяжитесь с диспетчером, чтобы узнать стоимость услуг и записаться на замер.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="label">2 шаг</div>
+                    <img src="assets/scss/main/main__assets/estimate.svg" alt="measurer">
+                    <p>
+                        Примите замерщика, чтобы он снял размеры и мастера начали подготовку конструкций для дальнейшего монтажа
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="label">3 шаг</div>
+                    <img src="assets/scss/main/main__assets/build.svg" alt="build">
+                    <p>
+                        Примите мастеров, чтобы они за 1-2 дня сделали Вам внутреннюю и наружную отделку, остекление, настил пола или прочие услуги 
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="label">4 шаг</div><img src="assets/scss/main/main__assets/award.svg" alt="award">
+                    <p>
+                        Убедитесь в качестве услуг, которые предоставляет компания и если Вы сообщите о каких-либо недочётах, то мастер вскоре их устранит
+                    </p>
+                </div>
             </div>
             
-            <div class="section-company__wrapper feedbackCompany">
-
+            <div class="section-company__wrapper feedbackCompany" hidden>
+                <img src="assets/scss/main/main__assets/comment.png" alt="comment">
             </div>
         </section>
         <section class="section section-cases">
             <h2 class="h2 section-cases__h2" id="cases">Портфолио</h2>
             <div class="section-cases__wrapper">
-                <img src="assets/scss/main/main__assets/left-arrow.svg" alt="left-arrow" class="section-cases__arrow">
+                <img src="assets/scss/main/main__assets/left-arrow.svg" alt="left-arrow" class="section-cases__arrow leftArrow">
                 <div class="section-cases__wrapper-photo">
-                    <img src="assets/scss/main/main__assets/photo1.jpg" alt="photo1" class="section-cases__photo">
-                    <img src="assets/scss/main/main__assets/photo2.jpg" alt="photo2" class="section-cases__photo">
-                    <img src="assets/scss/main/main__assets/photo3.jpg" alt="photo3" class="section-cases__photo">
-                    <img src="assets/scss/main/main__assets/photo4.jpg" alt="photo4" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo1.jpg" alt="photo1" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo2.jpg" alt="photo2" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo3.jpg" alt="photo3" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo4.jpg" alt="photo4" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo5.png" alt="photo5" class="section-cases__photo" hidden>
+                    <img src="assets/scss/main/main__assets/photo/photo6.png" alt="photo6" class="section-cases__photo" hidden>
+                    <img src="assets/scss/main/main__assets/photo/photo7.png" alt="photo7" class="section-cases__photo" hidden>
+                    <img src="assets/scss/main/main__assets/photo/photo8.png" alt="photo8" class="section-cases__photo" hidden>
+                    <img src="assets/scss/main/main__assets/photo/photo9.png" alt="photo9" class="section-cases__photo" hidden>
+                    <img src="assets/scss/main/main__assets/photo/photo10.png" alt="photo10" class="section-cases__photo" hidden>
+                    <img src="assets/scss/main/main__assets/photo/photo11.png" alt="photo11" class="section-cases__photo" hidden>
                 </div>
-                <img src="assets/scss/main/main__assets/right-arrow.svg" alt="right-arrow" class="section-cases__arrow">
+                <img src="assets/scss/main/main__assets/right-arrow.svg" alt="right-arrow" class="section-cases__arrow rightArrow">
             </div>
         </section>
     </main>
@@ -135,9 +168,9 @@
             <div class="footer__credit-container">
                 <h2 class="h2 footer__h2">Внутренняя рассрочка</h2>
                 <ul class="condition-list footer__condition-list">
-                    <li class="li footer__li">Первый взнос <span class="footer__span">50%</span></li>
+                    <li class="li footer__li">Первый взнос <span class="footer__span">30%</span></li>
                     <li class="li footer__li">Переплата по рассрочке <span class="footer__span">0%</span></li>
-                    <li class="li footer__li">Сроком до <span class="footer__span">3 месяцев</span></li>
+                    <li class="li footer__li">Сроком до <span class="footer__span">6 месяцев</span></li>
                 </ul>
             </div>
         </section>
@@ -152,7 +185,7 @@
                 <div class="phone" id="contacts">
                     <div class="phone-wrapper">
                         <img src="assets/scss/footer/footer__assets/phone.svg" alt="phone" class="phone">
-                        <span class="phone-span">+73953266098</span>
+                        <span class="phone-span">+7 (395) 326-60-98</span>
                     </div>
                     <div class="mail-wrapper">
                         <img src="assets/scss/footer/footer__assets/mail.svg" alt="mail" class="mail">
@@ -173,6 +206,9 @@
 
     <!-- Кнопки в разделе компания -->
     <script src="assets/scss/main/main.js"></script>
+
+    <!-- Слайдер -->
+    <script src="assets/scss/main/main_circ.js"></script>
 
     <!-- скачивание документов -->
     <script src="assets/scss/footer/footer.js"></script>

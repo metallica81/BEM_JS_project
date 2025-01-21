@@ -93,5 +93,76 @@
     }
 }
 
+// Разделы
+
+.workWayCompany {
+    @extend %font-p;
+    p {
+        color: #000;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img {
+        height: 200px;
+        margin-right: auto;
+    }
+    padding: 20px 60px 30px 60px;
+    
+}
+
+.label {
+    width: 80px;
+    height: 38px;
+    border-radius: 30px;
+    background-color: #59B293;
+    box-shadow: 3px 4px 5px rgba(1, 1, 1, 0.5);
+    padding-top: 6px;
+    padding-left: 16px;
+    font-size: 18px;
+}
+
+.step:nth-child(2) {
+    .label {
+        background-color: #ebce4a;
+    }
+}
+
+.step:nth-child(3) {
+    .label {
+        background-color: #458FDE;
+    }
+}
+
+.step:nth-child(4) {
+    .label {
+        background-color: #EF7F04;
+    }
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 240px;
+}
+
+.section-cases__photo {
+    transition: opacity 0.5s ease; /* Анимация прозрачности */
+    opacity: 1; /* По умолчанию слайды видны */
+  }
+  
+  .section-cases__photo.hidden {
+    opacity: 0; /* Слайд скрывается плавно */
+  }
+  
+  .section-cases__wrapper-photo {
+    position: relative; /* Для правильного позиционирования слайдов */
+  }
+  
+
+.section-cases__arrow {
+    cursor: pointer; /* Указатель мыши для стрелок */
+}
 
 
