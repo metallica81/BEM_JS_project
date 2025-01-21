@@ -74,12 +74,24 @@
   margin-inline: auto;
 }
 
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .main {
+    width: auto;
+  }
+}
 .section {
   width: 1247px;
   margin-top: 122px;
   background-color: white;
 }
 
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section {
+    width: 756px;
+    height: auto !important;
+    margin-inline: auto;
+  }
+}
 .section-company {
   height: 621px;
 }
@@ -99,6 +111,18 @@
   gap: 30px;
 }
 
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section-company__wrapper {
+    flex-direction: column column;
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .workWayCompany {
+    display: flex;
+    flex-direction: column column;
+  }
+}
 .section-company__wrapper-text {
   width: 352px;
   height: 365px;
@@ -108,6 +132,12 @@
   margin-left: 164px;
 }
 
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section-company__wrapper-text {
+    margin: auto;
+    height: auto;
+  }
+}
 .section-company__p {
   display: list-item;
   color: black;
@@ -130,6 +160,11 @@
   width: 562px;
 }
 
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section-company__wrapper-video {
+    margin: auto;
+  }
+}
 .h2 {
   width: 143px;
 }
@@ -402,28 +437,57 @@
   margin-top: 122px;
   margin-inline: auto;
 }
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .main {
+    width: auto;
+  }
+}
 
 .section {
   width: 1247px;
   margin-top: 122px;
   background-color: white;
 }
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section {
+    width: 756px;
+    height: auto !important;
+    margin-inline: auto;
+  }
+}
 
 .section-company {
   height: 621px;
 }
+
 .section-company__h2 {
   padding-top: 50px;
   margin: auto;
 }
+
 .section-company__panel {
   margin: auto;
   padding-block: 30px;
 }
+
 .section-company__wrapper {
   display: flex;
   gap: 30px;
 }
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section-company__wrapper {
+    flex-direction: column column;
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .workWayCompany {
+    display: flex;
+    flex-direction: column column;
+  }
+}
+
 .section-company__wrapper-text {
   width: 352px;
   height: 365px;
@@ -432,6 +496,13 @@
   gap: 10px;
   margin-left: 164px;
 }
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section-company__wrapper-text {
+    margin: auto;
+    height: auto;
+  }
+}
+
 .section-company__p {
   display: list-item;
   color: black;
@@ -439,6 +510,7 @@
 .section-company__p::marker {
   color: #2e9aff;
 }
+
 .section-company__p-container > .section-company__p {
   color: black;
 }
@@ -450,6 +522,11 @@
 
 .section-company__wrapper-video video {
   width: 562px;
+}
+@media only screen and (min-width: 757px) and (max-width: 1299px) {
+  .section-company__wrapper-video {
+    margin: auto;
+  }
 }
 
 .h2 {

@@ -1,54 +1,82 @@
 @use "components" as components;
 @use "../variables" as variables;
+@use "../mixins" as mixins;
 
 .main {
     width: variables.$global-width;
     margin-top: variables.$global-margin;
     margin-inline: auto;
+    @include mixins.screen-respond(large-medium-screens) {
+        width: auto;
+    }
 }
 
 .section {
     width: variables.$global-width;
     margin-top: 122px;
     background-color: white;
+    @include mixins.screen-respond(large-medium-screens) {
+        width: mixins.$medium-screen;
+        height: auto !important;
+        margin-inline: auto;
+    }
 }
 
 .section-company {
     height: 621px;
-    &__h2 {
-        padding-top: 50px;
-        margin: auto;
+    
+}
+
+.section-company__h2 {
+    padding-top: 50px;
+    margin: auto;
+}
+
+.section-company__panel {
+    margin: auto;
+    padding-block: 30px;
+}
+
+.section-company__wrapper {
+    display: flex;
+    gap: 30px;
+    @include mixins.screen-respond(large-medium-screens) {
+        flex-direction: column column;
+        padding-bottom: 60px;
     }
-    &__panel {
-        margin: auto;
-        padding-block: 30px;
-    }
-    &__wrapper {
+}
+
+.workWayCompany {
+    @include mixins.screen-respond(large-medium-screens) {
         display: flex;
-        gap: 30px;
-        &-text {
-            width: 352px;
-            height: 365px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-left: 164px;
-
-        }
+        flex-direction: column column;
     }
+}
 
-    &__p {
-        display: list-item;
-        &::marker {
-            color: #2e9aff;
-        }
-        @extend %font-p;
-        color: black;
+.section-company__wrapper-text {
+    width: 352px;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 164px;
+    @include mixins.screen-respond(large-medium-screens) {
+        margin: auto;
+        height: auto;
     }
+}
 
-    &__p-container > &__p {
-        color: black;
+.section-company__p {
+    display: list-item;
+    &::marker {
+        color: #2e9aff;
     }
+    @extend %font-p;
+    color: black;
+}
+
+.section-company__p-container > .section-company__p {
+    color: black;
 }
 
 .section-way, .section-feedback {
@@ -59,6 +87,9 @@
 .section-company__wrapper-video {
     video {
         width: 562px;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        margin: auto;
     }
 }
 
