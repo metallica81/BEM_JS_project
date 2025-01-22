@@ -4,14 +4,17 @@
     display: flex;
     align-items: center;
     img {
+        @include mixins.screen-respond(large-medium-screens) {
+            width: 50px;
+        }
         @include mixins.screen-respond(medium-screens) {
-            width: 60px;
+            width: 50px;
         }
         @include mixins.screen-respond(handhelds) {
-            width: 60px;
+            width: 50px;
         }
         @include mixins.screen-respond(phones) {
-            width: 60px;
+            width: 50px;
         }
     }
 }
@@ -19,6 +22,9 @@
 .logo__span {
     display: inline-block;
     @extend %font-icon;
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 16px;
+    }
     @include mixins.screen-respond(medium-screens) {
         font-size: 16px;
     }

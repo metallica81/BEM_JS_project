@@ -4,9 +4,13 @@
 
 .footer {
     width: 100%;
-    height: 548px;
+    height: auto;
     background-color: variables.$background-color-footer;
     margin-top: 122px;
+    @include mixins.screen-respond(large-medium-screens) {
+        margin-inline: auto;
+        margin-top: 70px;
+    }
 }
 
 .footer__credit {
@@ -18,6 +22,12 @@
     gap: 64px;
     justify-content: center;
     align-items: flex-end;
+    @include mixins.screen-respond(large-medium-screens) {
+        img {
+            height: 250px;
+        }
+        height: 250px;
+    }
 }
 
 .footer__credit-container {
@@ -29,7 +39,16 @@
     .footer__h2 {
         margin: auto;
         padding-block: 60px;
-        width: 260px;
+        width: 172px;
+        @include mixins.screen-respond(large-medium-screens) {
+            font-size: 16px;
+            //margin: auto;
+            padding-block: 30px;
+        }
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        width: 250px;
+        height: 228px;
     }
 }
 
@@ -44,10 +63,14 @@
         //list-style-image: url('scss/assets/footer/marker.svg');
         list-style-type: none;
         position: relative;
+        
     }
     li.li {
         color: black;
         text-transform: initial;
+        @include mixins.screen-respond(large-medium-screens) {
+            font-size: 14px;
+        }
     }
     li::before {
         content: ''; /* Псевдоэлемент для маркера */
@@ -68,13 +91,25 @@
 }
 
 .contact {
-    width: variables.$global-width;
+    width: mixins.$medium-screen;
+    @include mixins.screen-respond(large-medium-screens) {
+        width: mixins.$medium-screen - 20px;
+        height: auto;
+        padding-block: 10px;
+        justify-content: space-around;
+    }
     height: 146px;
     margin: auto;
     @extend %font-p;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+section.contact {
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 11px;
+    }
 }
 
 .icon {
@@ -87,6 +122,11 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @include mixins.screen-respond(large-medium-screens) {
+        img {
+            width: 18px;
+        }
+    }
 }
 
 .phone-wrapper {
@@ -94,6 +134,9 @@
     gap: 10px;
     .phone-span {
         font-size: 20px;
+        @include mixins.screen-respond(large-medium-screens) {
+            font-size: 15px;
+        }
         text-decoration: underline;
         font-weight: bold;
         letter-spacing: 0.7px;

@@ -1,0 +1,152 @@
+@use "../components" as components;
+@use "../../variables" as variables;
+@use "../../mixins" as mixins;
+
+.section-company {
+    height: 621px;
+}
+
+.section-company__h2 {
+    padding-top: 50px;
+    margin: auto;
+}
+
+.section-company__panel {
+    margin: auto;
+    padding-block: 30px;
+}
+
+.section-company__wrapper {
+    display: flex;
+    gap: 30px;
+    @include mixins.screen-respond(large-medium-screens) {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+}
+
+.workWayCompany {
+    @include mixins.screen-respond(large-medium-screens) {
+        display: flex;
+        
+    }
+    @include mixins.screen-respond(medium-screens) {
+        display: flex; 
+    }
+}
+
+.section-company__wrapper-text {
+    width: 352px;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 164px;
+    @include mixins.screen-respond(large-medium-screens) {
+        margin: auto;
+        height: auto;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        margin: auto;
+        height: auto;
+    }
+}
+
+.section-company__p {
+    display: list-item;
+    &::marker {
+        color: #2e9aff;
+    }
+    @extend %font-p;
+    color: black;
+}
+
+.section-company__p-container > .section-company__p {
+    color: black;
+}
+
+.section-way, .section-feedback {
+    height: 500px;
+    display: none;
+}
+
+.section-company__wrapper-video {
+    video {
+        width: 562px;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        margin: auto;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        margin: auto;
+    }
+}
+
+.h2 {
+    width: 143px;
+    @extend %font-h2;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+}
+
+// Разделы
+
+.workWayCompany {
+    @extend %font-p;
+    p {
+        color: #000;
+    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    img {
+        height: 200px;
+        margin-right: auto;
+    }
+    padding: 20px 60px 30px 60px;
+}
+
+.label {
+    width: 80px;
+    height: 38px;
+    border-radius: 30px;
+    background-color: #59B293;
+    box-shadow: 3px 4px 5px rgba(1, 1, 1, 0.5);
+    padding-top: 6px;
+    padding-left: 16px;
+    font-size: 18px;
+}
+
+.step:nth-child(2) {
+    .label {
+        background-color: #ebce4a;
+    }
+}
+
+.step:nth-child(3) {
+    .label {
+        background-color: #458FDE;
+    }
+}
+
+.step:nth-child(4) {
+    .label {
+        background-color: #EF7F04;
+    }
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    width: 232px;
+}

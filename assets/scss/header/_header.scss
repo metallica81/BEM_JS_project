@@ -104,7 +104,7 @@ body {
         width: mixins.$tablets-screen;
     }
     @include mixins.screen-respond(large-medium-screens) {
-        width: mixins.$medium-screen;
+        width: mixins.$medium-screen - 20px;
     }
     @include mixins.screen-respond(phones) {
         width: mixins.$ultra-narrow;
