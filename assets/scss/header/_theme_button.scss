@@ -1,0 +1,29 @@
+@use '../variables' as variables;
+@use '../mixins' as mixins;
+
+.header__wrapper-theme {
+    width: 343px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 34px;
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 2px solid variables.$font-orange;
+}
+
+.theme-button {
+    width: 173px;
+    height: 28px;
+    background-color: variables.$font-orange;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    color: white;
+    @extend %font-button;
+}
+
+.dark {
+    background-color: transparent;
+}

@@ -240,7 +240,9 @@ section.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: auto;
+    @include mixins.screen-respond(medium-screens) {
+        margin-bottom: auto;
+    }
 }
 
 .logo_copy {
