@@ -27,6 +27,14 @@
         flex-direction: column;
         padding-bottom: 60px;
     }
+    @include mixins.screen-respond(handhelds) {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+    @include mixins.screen-respond(phones) {
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
 }
 
 .workWayCompany {
@@ -54,6 +62,14 @@
         margin: auto;
         height: auto;
     }
+    @include mixins.screen-respond(handhelds) {
+        margin: auto;
+        height: auto;
+    }
+    @include mixins.screen-respond(phones) {
+        margin: auto;
+        height: auto;
+    }
 }
 
 .section-company__p {
@@ -78,10 +94,28 @@
     video {
         width: 562px;
     }
+}
+
+div.section-company__wrapper-video {
     @include mixins.screen-respond(large-medium-screens) {
         margin: auto;
     }
     @include mixins.screen-respond(medium-screens) {
+        video {
+            width: 400px;
+        }
+        margin: auto;
+    }
+    @include mixins.screen-respond(handhelds) {
+        video {
+            width: 400px;
+        }
+        margin: auto;
+    }
+    @include mixins.screen-respond(phones) {
+        video {
+            width: 400px;
+        }
         margin: auto;
     }
 }
@@ -95,6 +129,24 @@
     display: flex;
     justify-content: space-around;
     width: 600px;
+}
+
+div.panel {
+    @include mixins.screen-respond(medium-screens) {
+        width: auto;
+        //padding-inline: 5px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        width: 144px;
+        flex-direction: column;
+        margin-inline: auto;
+        gap: 10px;
+        //padding-inline: 5px;
+    }
+    @include mixins.screen-respond(phones) {
+        width: auto;
+        //padding-inline: 5px;
+    }
 }
 
 // Разделы

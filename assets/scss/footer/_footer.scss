@@ -7,7 +7,14 @@
     height: auto;
     background-color: variables.$background-color-footer;
     margin-top: 122px;
+}
+
+footer.footer {
     @include mixins.screen-respond(large-medium-screens) {
+        margin-inline: auto;
+        margin-top: 70px;
+    }
+    @include mixins.screen-respond(medium-screens) {
         margin-inline: auto;
         margin-top: 70px;
     }
@@ -22,11 +29,34 @@
     gap: 64px;
     justify-content: center;
     align-items: flex-end;
+}
+
+section.footer__credit {
     @include mixins.screen-respond(large-medium-screens) {
         img {
             height: 250px;
         }
         height: 250px;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        img {
+            height: 250px;
+            display: none;
+        }
+        height: 250px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        img {
+            height: 250px;
+            display: none;
+        }
+        
+    }
+    @include mixins.screen-respond(phones) {
+        img {
+            height: 250px;
+            display: none;
+        }
     }
 }
 
@@ -36,44 +66,73 @@
     background-color: #fff;
     border-radius: 18px 18px 0 0;
     box-shadow: 3px 4px 23px rgba(0, 0, 0, 25%);
-    .footer__h2 {
-        margin: auto;
-        padding-block: 60px;
-        width: 172px;
-        @include mixins.screen-respond(large-medium-screens) {
-            font-size: 16px;
-            //margin: auto;
-            padding-block: 30px;
-        }
-    }
+}
+
+div.footer__credit-container {
     @include mixins.screen-respond(large-medium-screens) {
+        width: 250px;
+        height: 228px;
+    }
+    @include mixins.screen-respond(medium-screens) {
         width: 250px;
         height: 228px;
     }
 }
 
-.condition-list {
-    .li {
-        @extend %font-icon;
-        font-size: 18px;
-        font-weight: 500;
-        margin-left: 30px;
-        padding-left: 15px;
-        padding-top: 15px;
-        //list-style-image: url('scss/assets/footer/marker.svg');
-        list-style-type: none;
-        position: relative;
-        
+h2.footer__h2 {
+    margin: auto;
+    padding-block: 60px;
+    width: 258px;
+}
+
+h2.footer__h2 {
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 16px;
+        //margin: auto;
+        padding-block: 30px;
+        width: 172px;
     }
-    li.li {
-        color: black;
-        text-transform: initial;
-        @include mixins.screen-respond(large-medium-screens) {
-            font-size: 14px;
-        }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 16px;
+        //margin: auto;
+        padding-block: 30px;
+        width: 172px;
     }
-    li::before {
-        content: ''; /* Псевдоэлемент для маркера */
+}
+
+
+.li {
+    @extend %font-icon;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 30px;
+    padding-left: 15px;
+    padding-top: 15px;
+    //list-style-image: url('scss/assets/footer/marker.svg');
+    list-style-type: none;
+    position: relative;
+}
+
+li.li {
+    color: black;
+    text-transform: initial;
+}
+
+li.li {
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 14px;
+        padding-left: 4px;
+        margin-left: 18px;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 14px;
+        padding-left: 4px;
+        margin-left: 18px;
+    }
+}
+
+.li::before {
+    content: ''; /* Псевдоэлемент для маркера */
     background-image: url('assets/scss/footer/footer__assets/marker.svg'); /* Подключаем SVG */
     background-size: contain; /* Обеспечиваем правильное отображение */
     background-repeat: no-repeat;
@@ -83,8 +142,8 @@
     transform: translateY(calc(-50% + 8px)); /* Смещаем маркер вниз на 2px */
     width: 20px; /* Размер маркера */
     height: 20px; /* Размер маркера */
-    }
 }
+
 
 .footer__span {
     color: variables.$font-orange;
@@ -92,12 +151,6 @@
 
 .contact {
     width: mixins.$medium-screen;
-    @include mixins.screen-respond(large-medium-screens) {
-        width: mixins.$medium-screen - 20px;
-        height: auto;
-        padding-block: 10px;
-        justify-content: space-around;
-    }
     height: 146px;
     margin: auto;
     @extend %font-p;
@@ -109,6 +162,24 @@
 section.contact {
     @include mixins.screen-respond(large-medium-screens) {
         font-size: 11px;
+        width: mixins.$medium-screen - 20px;
+        height: auto;
+        padding-block: 10px;
+        justify-content: space-around;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 11px;
+        width: 580px;
+        height: auto;
+        padding-block: 10px;
+        justify-content: space-around;
+        position: relative;
+    }
+    @include mixins.screen-respond(handhelds) {
+        position: relative;
+    }
+    @include mixins.screen-respond(phones) {
+        position: relative;
     }
 }
 
@@ -116,13 +187,39 @@ section.contact {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: auto;
+}
+
+.logo_copy {
+    display: none;
+    width: 20px;
+    position: absolute;
+    @include mixins.screen-respond(medium-screens) {
+        display: block;
+        top: 74px;
+        left: 42px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        
+    }
+    @include mixins.screen-respond(phones) {
+        
+    }
 }
 
 .phone {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+div.phone {
     @include mixins.screen-respond(large-medium-screens) {
+        img {
+            width: 18px;
+        }
+    }
+    @include mixins.screen-respond(medium-screens) {
         img {
             width: 18px;
         }
@@ -132,14 +229,21 @@ section.contact {
 .phone-wrapper {
     display: flex;
     gap: 10px;
-    .phone-span {
-        font-size: 20px;
-        @include mixins.screen-respond(large-medium-screens) {
-            font-size: 15px;
-        }
-        text-decoration: underline;
-        font-weight: bold;
-        letter-spacing: 0.7px;
+}
+
+.phone-span {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+}
+
+span.phone-span {
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 15px;
+    }
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 15px;
     }
 }
 
@@ -150,4 +254,10 @@ section.contact {
 
 .copyright {
     cursor: pointer;
+    @include mixins.screen-respond(medium-screens) {
+        position: absolute;
+        display: block;
+        left: 63px;
+        top: 77px;
+    }
 }

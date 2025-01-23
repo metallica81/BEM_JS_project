@@ -1,16 +1,22 @@
 @use "../variables" as variables;
+@use "../mixins" as mixins;
 // button
 .button {
-
     text-decoration: none;
     color: black;
     @extend %font-button;
-
     border: none;
     width: 144px;
     height: 38px;
     outline: none;
     background-color: #fff;
+}
+
+button.button {
+    @include mixins.screen-respond(medium-screens) {
+        width: 144px;
+        padding-inline: 5px;
+    }
 }
 
 .button_selected {

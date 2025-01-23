@@ -19,6 +19,14 @@ main.main {
         width: auto;
         margin-top: 10px;
     }
+    @include mixins.screen-respond(handhelds) {
+        width: auto;
+        margin-top: 10px;
+    }
+    @include mixins.screen-respond(phones) {
+        width: auto;
+        margin-top: 10px;
+    }
 }
 
 .section {
@@ -33,7 +41,17 @@ section.section {
         margin-inline: auto;
     }
     @include mixins.screen-respond(medium-screens) {
-        width: 80%;
+        width: 580px;
+        height: auto;
+        margin-inline: auto;
+    }
+    @include mixins.screen-respond(handhelds) {
+        width: 580px;
+        height: auto;
+        margin-inline: auto;
+    }
+    @include mixins.screen-respond(phones) {
+        width: 580px;
         height: auto;
         margin-inline: auto;
     }

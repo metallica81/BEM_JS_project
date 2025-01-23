@@ -11,6 +11,14 @@ section.section-cases {
         height: 650px;
         margin-top: 70px;
     }
+    @include mixins.screen-respond(handhelds) {
+        height: 650px;
+        margin-top: 70px;
+    }
+    @include mixins.screen-respond(phones) {
+        height: 650px;
+        margin-top: 70px;
+    }
 }
 
 .section-cases__wrapper {
@@ -20,11 +28,20 @@ section.section-cases {
     flex-direction: row;
     padding-top: 40px;
     gap: 42px;
+}
+
+div.section-cases__wrapper {
     @include mixins.screen-respond(large-medium-screens) {
         width: 623px;
     }
     @include mixins.screen-respond(medium-screens) {
-        width: 623px;
+        width: 456px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        width: 456px;
+    }
+    @include mixins.screen-respond(phones) {
+        width: 456px;
     }
 }
 
@@ -38,6 +55,27 @@ section.section-cases {
     flex-wrap: wrap;
     gap: 42px;
     padding-bottom: 40px;
+}
+
+div.section-cases__wrapper-photo {
+    @include mixins.screen-respond(medium-screens) {
+        img {
+            width: 150px;
+        }
+        gap: 20px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        img {
+            width: 150px;
+        }
+        gap: 20px;
+    }
+    @include mixins.screen-respond(phones) {
+        img {
+            width: 150px;
+        }
+        gap: 20px;
+    }
 }
 
 .section-cases__arrow {
