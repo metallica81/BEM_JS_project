@@ -14,6 +14,12 @@
 .section-company__panel {
     margin: auto;
     padding-block: 30px;
+    @include mixins.screen-respond(handhelds) {
+        padding-block: 30px 10px;
+    }
+    @include mixins.screen-respond(phones) {
+        padding-block: 30px 10px;
+    }
 }
 
 .section-company__wrapper {
@@ -30,10 +36,12 @@
     @include mixins.screen-respond(handhelds) {
         flex-direction: column;
         padding-bottom: 60px;
+        gap: 0;
     }
     @include mixins.screen-respond(phones) {
         flex-direction: column;
         padding-bottom: 60px;
+        gap: 0;
     }
 }
 
@@ -65,10 +73,12 @@
     @include mixins.screen-respond(handhelds) {
         margin: auto;
         height: auto;
+        width: 220px;
     }
     @include mixins.screen-respond(phones) {
         margin: auto;
         height: auto;
+        width: 220px;
     }
 }
 
@@ -108,13 +118,13 @@ div.section-company__wrapper-video {
     }
     @include mixins.screen-respond(handhelds) {
         video {
-            width: 400px;
+            width: 310px;
         }
         margin: auto;
     }
     @include mixins.screen-respond(phones) {
         video {
-            width: 400px;
+            width: 250px;
         }
         margin: auto;
     }
@@ -123,6 +133,12 @@ div.section-company__wrapper-video {
 .h2 {
     width: 143px;
     @extend %font-h2;
+    @include mixins.screen-respond(handhelds) {
+        width: 113px;
+    }
+    @include mixins.screen-respond(phones) {
+        width: 113px;
+    }
 }
 
 .panel {
@@ -144,7 +160,10 @@ div.panel {
         //padding-inline: 5px;
     }
     @include mixins.screen-respond(phones) {
-        width: auto;
+        width: 144px;
+        flex-direction: column;
+        margin-inline: auto;
+        gap: 10px;
         //padding-inline: 5px;
     }
 }
@@ -163,8 +182,14 @@ div.panel {
     img {
         height: 200px;
         margin-right: auto;
+        @include mixins.screen-respond(phones) {
+            height: 170px;
+        }
     }
     padding: 20px 60px 30px 60px;
+    @include mixins.screen-respond(phones) {
+        gap: 20px;
+    }
 }
 
 .label {
@@ -188,6 +213,9 @@ div.panel {
     .label {
         background-color: #458FDE;
     }
+    img {
+        height: 210px;
+    }
 }
 
 .step:nth-child(4) {
@@ -201,4 +229,7 @@ div.panel {
     flex-direction: column;
     gap: 45px;
     width: 232px;
+    @include mixins.screen-respond(phones) {
+        gap: 20px;
+    }
 }

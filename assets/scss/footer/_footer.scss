@@ -18,6 +18,14 @@ footer.footer {
         margin-inline: auto;
         margin-top: 70px;
     }
+    @include mixins.screen-respond(handhelds) {
+        margin-inline: auto;
+        margin-top: 70px;
+    }
+    @include mixins.screen-respond(phones) {
+        margin-inline: auto;
+        margin-top: 70px;
+    }
 }
 
 .footer__credit {
@@ -50,13 +58,14 @@ section.footer__credit {
             height: 250px;
             display: none;
         }
-        
+        height: 250px;
     }
     @include mixins.screen-respond(phones) {
         img {
             height: 250px;
             display: none;
         }
+        height: 250px;
     }
 }
 
@@ -77,6 +86,14 @@ div.footer__credit-container {
         width: 250px;
         height: 228px;
     }
+    @include mixins.screen-respond(handhelds) {
+        width: 250px;
+        height: 228px;
+    }
+    @include mixins.screen-respond(phones) {
+        width: 250px;
+        height: 228px;
+    }
 }
 
 h2.footer__h2 {
@@ -93,6 +110,18 @@ h2.footer__h2 {
         width: 172px;
     }
     @include mixins.screen-respond(medium-screens) {
+        font-size: 16px;
+        //margin: auto;
+        padding-block: 30px;
+        width: 172px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        font-size: 16px;
+        //margin: auto;
+        padding-block: 30px;
+        width: 172px;
+    }
+    @include mixins.screen-respond(phones) {
         font-size: 16px;
         //margin: auto;
         padding-block: 30px;
@@ -129,6 +158,16 @@ li.li {
         padding-left: 4px;
         margin-left: 18px;
     }
+    @include mixins.screen-respond(handhelds) {
+        font-size: 14px;
+        padding-left: 4px;
+        margin-left: 18px;
+    }
+    @include mixins.screen-respond(phones) {
+        font-size: 14px;
+        padding-left: 4px;
+        margin-left: 18px;
+    }
 }
 
 .li::before {
@@ -150,7 +189,7 @@ li.li {
 }
 
 .contact {
-    width: mixins.$medium-screen;
+    width: variables.$global-width;
     height: 146px;
     margin: auto;
     @extend %font-p;
@@ -176,9 +215,23 @@ section.contact {
         position: relative;
     }
     @include mixins.screen-respond(handhelds) {
+        width: 380px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 11px;
+        height: auto;
+        padding-block: 10px;
         position: relative;
     }
     @include mixins.screen-respond(phones) {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 11px;
+        height: auto;
+        padding-block: 10px;
         position: relative;
     }
 }
@@ -200,10 +253,16 @@ section.contact {
         left: 42px;
     }
     @include mixins.screen-respond(handhelds) {
-        
+        width: 25px;
+        display: block;
+        top: 76px;
+        left: 78px;
     }
     @include mixins.screen-respond(phones) {
-        
+        width: 25px;
+        display: block;
+        top: 76px;
+        left: 0;
     }
 }
 
@@ -220,6 +279,16 @@ div.phone {
         }
     }
     @include mixins.screen-respond(medium-screens) {
+        img {
+            width: 18px;
+        }
+    }
+    @include mixins.screen-respond(handhelds) {
+        img {
+            width: 18px;
+        }
+    }
+    @include mixins.screen-respond(phones) {
         img {
             width: 18px;
         }
@@ -245,6 +314,12 @@ span.phone-span {
     @include mixins.screen-respond(medium-screens) {
         font-size: 15px;
     }
+    @include mixins.screen-respond(handhelds) {
+        font-size: 15px;
+    }
+    @include mixins.screen-respond(phones) {
+        font-size: 15px;
+    }
 }
 
 .mail-wrapper {
@@ -259,5 +334,19 @@ span.phone-span {
         display: block;
         left: 63px;
         top: 77px;
+    }
+    @include mixins.screen-respond(handhelds) {
+        text-decoration: underline;
+        position: absolute;
+        display: block;
+        left: 107px;
+        top: 80px;
+    }
+    @include mixins.screen-respond(phones) {
+        text-decoration: underline;
+        position: absolute;
+        display: block;
+        left: 33px;
+        top: 80px;
     }
 }

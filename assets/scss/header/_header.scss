@@ -61,6 +61,10 @@ body {
     @extend %font-h2-orange;
 }
 
+.header__content {
+    padding-left: 10px;
+}
+
 .header__p-slogan_font-thin {
     
     @include mixins.screen-respond(phones) {
@@ -97,7 +101,7 @@ body {
     height: 72px;
     margin-inline: auto;
     @include mixins.screen-respond(handhelds) {
-        width: mixins.$phones-screen;
+        width: mixins.$phones-screen - 20px;
         //margin: 0;
     }
     @include mixins.screen-respond(medium-screens) {

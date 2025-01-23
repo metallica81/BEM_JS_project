@@ -49,5 +49,5 @@ function descriptionCompany(event) {
     nextPage.classList.toggle('opened');
 
     let wrapper = document.querySelector('.section-company');
-    wrapper.style.height = "621px";
+    wrapper.style.height = "auto";
 }

@@ -26,6 +26,12 @@ $background-color-footer: #2F2F51;
         family: 'Roboto';
         weight: bold;
     }
+    @include mixins.screen-respond(handhelds) {
+        font-size: 20px;
+    }
+    @include mixins.screen-respond(phones) {
+        font-size: 20px;
+    }
 }
 
 %font-h2-orange {

@@ -3,6 +3,7 @@
 @use "../../mixins" as mixins;
 
 section.section-cases {
+    margin-top: 122px;
     @include mixins.screen-respond(large-medium-screens) {
         height: 650px;
         margin-top: 70px;
@@ -28,6 +29,9 @@ section.section-cases {
     flex-direction: row;
     padding-top: 40px;
     gap: 42px;
+    @include mixins.screen-respond(phones) {
+        gap: 20px;
+    }
 }
 
 div.section-cases__wrapper {
@@ -38,10 +42,10 @@ div.section-cases__wrapper {
         width: 456px;
     }
     @include mixins.screen-respond(handhelds) {
-        width: 456px;
+        width: 286px;
     }
     @include mixins.screen-respond(phones) {
-        width: 456px;
+        width: 242px;
     }
 }
 
@@ -69,15 +73,20 @@ div.section-cases__wrapper-photo {
             width: 150px;
         }
         gap: 20px;
+        display: flex;
+        flex-direction: column;
     }
     @include mixins.screen-respond(phones) {
         img {
             width: 150px;
         }
         gap: 20px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
 .section-cases__arrow {
-    cursor: pointer; /* Указатель мыши для стрелок */
+    cursor: pointer; 
+    padding-bottom: 40px;
 }

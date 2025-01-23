@@ -46,12 +46,12 @@ section.section {
         margin-inline: auto;
     }
     @include mixins.screen-respond(handhelds) {
-        width: 580px;
+        width: 380px;
         height: auto;
         margin-inline: auto;
     }
     @include mixins.screen-respond(phones) {
-        width: 580px;
+        width: 300px;
         height: auto;
         margin-inline: auto;
     }
