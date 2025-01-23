@@ -17,7 +17,7 @@ body {
 // }
 
 .header__wrapper {
-    background-image: url('/assets/scss/header/header__assets/background.png');
+    background-image: url('assets/scss/header/header__assets/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 562px;
@@ -59,6 +59,15 @@ body {
 
 .header__span-name {
     @extend %font-h2-orange;
+    @include mixins.screen-respond(medium-screens) {
+        font-size: 36px;
+    }
+    @include mixins.screen-respond(large-medium-screens) {
+        font-size: 36px;
+    }
+    @include mixins.screen-respond(wide-screens) {
+        font-size: 36px;
+    }
 }
 
 .header__content {
