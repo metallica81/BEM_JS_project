@@ -3,6 +3,7 @@
 @use "../mixins" as mixins;
 @use "../main/main__panel/main__panel";
 @use "../main/main__cases/main__cases";
+@use "../main/main__feedback/main_feedback";
 
 .main {
     width: variables.$global-width;

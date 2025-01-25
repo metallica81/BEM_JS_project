@@ -22,7 +22,7 @@
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .contact, .section-company__p, .workWayCompany, .header__button_font-roboto, .button {
+.header__p-reason_font-roboto, .contact, .feedbackCompany, .section-company__p, .workWayCompany, .header__button_font-roboto, .button {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -73,7 +73,7 @@
   width: 144px;
   height: 38px;
   outline: none;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 756px) {
@@ -457,6 +457,18 @@ section.section-cases {
 .section-cases__arrow {
   cursor: pointer;
   padding-bottom: 40px;
+}
+
+.feedbackCompany {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.section-company__svg {
+  width: 382px;
+  padding-bottom: 30px;
 }
 
 .main {
@@ -941,7 +953,7 @@ li.li {
   color: #EF7F04;
 }
 
-.header__p-reason_font-roboto, .contact, .section-company__p, .workWayCompany, .header__button_font-roboto, .button {
+.header__p-reason_font-roboto, .contact, .feedbackCompany, .section-company__p, .workWayCompany, .header__button_font-roboto, .button {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -992,7 +1004,7 @@ li.li {
   width: 144px;
   height: 38px;
   outline: none;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 756px) {
@@ -1378,6 +1390,18 @@ section.section-cases {
   padding-bottom: 40px;
 }
 
+.feedbackCompany {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.section-company__svg {
+  width: 382px;
+  padding-bottom: 30px;
+}
+
 .main {
   width: 1247px;
   margin-top: 122px;
@@ -1450,7 +1474,7 @@ section.section-cases {
   color: #EF7F04;
 }
 
-.contact, .header__p-reason_font-roboto, .header__button_font-roboto, .theme-button {
+.contact, .header__p-reason_font-roboto, .header__button_font-roboto {
   font-size: 14px;
   font-family: "Roboto";
   color: white;
@@ -1469,28 +1493,28 @@ section.section-cases {
   text-transform: uppercase;
 }
 
-.header__button_font-roboto, .theme-button {
+.header__button_font-roboto {
   font-size: 16px;
   color: black;
 }
 
 @media only screen and (min-width: 757px) and (max-width: 1299px) {
-  .header__button_font-roboto, .theme-button {
+  .header__button_font-roboto {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 601px) and (max-width: 756px) {
-  .header__button_font-roboto, .theme-button {
+  .header__button_font-roboto {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 600px) {
-  .header__button_font-roboto, .theme-button {
+  .header__button_font-roboto {
     font-size: 14px;
   }
 }
 @media only screen and (max-width: 400px) {
-  .header__button_font-roboto, .theme-button {
+  .header__button_font-roboto {
     font-size: 14px;
   }
 }
@@ -1601,25 +1625,17 @@ section.section-cases {
   }
 }
 .header__wrapper-theme {
-  width: 343px;
+  width: 43px;
   height: 32px;
   background-color: transparent;
-  border-radius: 34px;
   display: flex;
   position: absolute;
   top: 30px;
   right: 30px;
-  border: 2px solid #EF7F04;
 }
 
-.theme-button {
-  width: 173px;
-  height: 28px;
-  background-color: #EF7F04;
-  border: none;
-  outline: none;
-  border-radius: 100px;
-  color: white;
+.theme_button {
+  cursor: pointer;
 }
 
 .dark {

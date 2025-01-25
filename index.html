@@ -17,10 +17,10 @@
 <body>
     <header class="header">
         <div class="header__wrapper">
-            <!-- <div class="header__wrapper-theme">
-                <button class="header__theme-button theme-button light" onclick="return false;">Светлая</button>
-                <button class="header__theme-button theme-button dark" onclick="return false;">Тёмная</button>
-            </div> -->
+            <div class="header__wrapper-theme">
+                <img src="assets/scss/header/header__assets/dark_button.svg" alt="dark_theme" title="Переключатель темы" class="dark theme_button">
+                <img src="assets/scss/header/header__assets/light_button.svg" alt="light_theme" title="Переключатель темы" class="light theme_button" hidden>
+            </div>
             
             <div class="header__content">
                 <p class="header__p-slogan header__p-slogan_font-thin">
@@ -142,7 +142,7 @@
             </div>
             
             <div class="section-company__wrapper feedbackCompany" hidden>
-                <img src="assets/scss/main/main__assets/comment.png" alt="comment">
+                <embed src="assets/scss/main/main__assets/dev.svg" type="image/svg+xml" class="section-company__svg">
             </div>
         </section>
         <section class="section section-cases">
@@ -150,10 +150,10 @@
             <div class="section-cases__wrapper">
                 <img src="assets/scss/main/main__assets/left-arrow.svg" alt="left-arrow" class="section-cases__arrow leftArrow">
                 <div class="section-cases__wrapper-photo">
-                    <img src="assets/scss/main/main__assets/photo/photo1.jpg" alt="photo1" class="section-cases__photo">
-                    <img src="assets/scss/main/main__assets/photo/photo2.jpg" alt="photo2" class="section-cases__photo">
-                    <img src="assets/scss/main/main__assets/photo/photo3.jpg" alt="photo3" class="section-cases__photo">
-                    <img src="assets/scss/main/main__assets/photo/photo4.jpg" alt="photo4" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo1.png" alt="photo1" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo2.png" alt="photo2" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo3.png" alt="photo3" class="section-cases__photo">
+                    <img src="assets/scss/main/main__assets/photo/photo4.png" alt="photo4" class="section-cases__photo">
                     <img src="assets/scss/main/main__assets/photo/photo5.png" alt="photo5" class="section-cases__photo" hidden>
                     <img src="assets/scss/main/main__assets/photo/photo6.png" alt="photo6" class="section-cases__photo" hidden>
                     <img src="assets/scss/main/main__assets/photo/photo7.png" alt="photo7" class="section-cases__photo" hidden>
@@ -206,6 +206,9 @@
         </section>
         
     </footer>
+
+    <!-- Смена темы -->
+    <script src="assets/scss/header/theme.js"></script>
 
     <!-- Меню -->
     <script src="assets/scss/header/header.js"></script> 

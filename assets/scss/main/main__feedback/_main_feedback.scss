@@ -1,0 +1,14 @@
+@use '../../variables' as variables;
+
+.feedbackCompany {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @extend %font-p;
+    color: black;
+}
+
+.section-company__svg {
+    width: 382px;
+    padding-bottom: 30px;
+}
