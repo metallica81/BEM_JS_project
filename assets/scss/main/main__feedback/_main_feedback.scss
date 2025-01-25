@@ -1,4 +1,5 @@
 @use '../../variables' as variables;
+@use '../../mixins' as mixins;
 
 .feedbackCompany {
     display: flex;
@@ -11,4 +12,15 @@
 .section-company__svg {
     width: 382px;
     padding-bottom: 30px;
+}
+
+embed.section-company__svg {
+    @include mixins.screen-respond(handhelds) {
+        padding-top: 30px;
+        width: 250px;
+    }
+    @include mixins.screen-respond(phones) {
+        padding-top: 30px;
+        width: 220px;
+    }
 }

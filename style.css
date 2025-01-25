@@ -471,6 +471,18 @@ section.section-cases {
   padding-bottom: 30px;
 }
 
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  embed.section-company__svg {
+    padding-top: 30px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  embed.section-company__svg {
+    padding-top: 30px;
+    width: 220px;
+  }
+}
 .main {
   width: 1247px;
   margin-top: 122px;
@@ -1402,6 +1414,18 @@ section.section-cases {
   padding-bottom: 30px;
 }
 
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  embed.section-company__svg {
+    padding-top: 30px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  embed.section-company__svg {
+    padding-top: 30px;
+    width: 220px;
+  }
+}
 .main {
   width: 1247px;
   margin-top: 122px;
