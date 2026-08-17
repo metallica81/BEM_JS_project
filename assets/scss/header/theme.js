@@ -78,11 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    //footer
-    const footerH2 = document.querySelector('h2.footer__h2');
-    footerH2.style.color = 'black';
-
-
     // Восстановление светлой темы
     lightTheme.addEventListener('click', () => {
         changeBackgroundDark('#F2F2F2');
