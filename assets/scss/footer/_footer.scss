@@ -220,7 +220,7 @@ section.contact {
         flex-direction: column;
         gap: 30px;
         font-size: 11px;
-        height: auto;
+        height: 250px;
         padding-block: 10px;
         position: relative;
     }
@@ -230,7 +230,7 @@ section.contact {
         flex-direction: column;
         gap: 30px;
         font-size: 11px;
-        height: auto;
+        height: 250px;
         padding-block: 10px;
         position: relative;
     }
@@ -257,13 +257,13 @@ section.contact {
     @include mixins.screen-respond(handhelds) {
         width: 25px;
         display: block;
-        top: 76px;
+        top: 120px;
         left: 78px;
     }
     @include mixins.screen-respond(phones) {
         width: 25px;
         display: block;
-        top: 76px;
+        top: 120px;
         left: 0;
     }
 }
@@ -342,13 +342,13 @@ span.phone-span {
         position: absolute;
         display: block;
         left: 107px;
-        top: 80px;
+        top: 125px;
     }
     @include mixins.screen-respond(phones) {
         text-decoration: underline;
         position: absolute;
         display: block;
         left: 33px;
-        top: 80px;
+        top: 125px;
     }
 }

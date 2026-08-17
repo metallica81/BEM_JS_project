@@ -842,7 +842,7 @@ li.li {
     flex-direction: column;
     gap: 30px;
     font-size: 11px;
-    height: auto;
+    height: 250px;
     padding-block: 10px;
     position: relative;
   }
@@ -854,7 +854,7 @@ li.li {
     flex-direction: column;
     gap: 30px;
     font-size: 11px;
-    height: auto;
+    height: 250px;
     padding-block: 10px;
     position: relative;
   }
@@ -887,7 +887,7 @@ li.li {
   .logo_copy {
     width: 25px;
     display: block;
-    top: 76px;
+    top: 120px;
     left: 78px;
   }
 }
@@ -895,7 +895,7 @@ li.li {
   .logo_copy {
     width: 25px;
     display: block;
-    top: 76px;
+    top: 120px;
     left: 0;
   }
 }
@@ -982,7 +982,7 @@ li.li {
     position: absolute;
     display: block;
     left: 107px;
-    top: 80px;
+    top: 125px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -991,7 +991,7 @@ li.li {
     position: absolute;
     display: block;
     left: 33px;
-    top: 80px;
+    top: 125px;
   }
 }
 
